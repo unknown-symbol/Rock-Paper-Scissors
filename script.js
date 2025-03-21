@@ -67,9 +67,10 @@ function playGame(times = 5) {
     console.log("You win the game!!1");
   } else if (humanScore < computerScore) {
     console.log("The computer wins the game!");
-  } else console.log();
+  } else console.log("It's a tie!");
 
   console.log(`Score (Human vs Computer) ${humanScore} : ${computerScore}`);
+  console.log("Reload the page to play again!");
 
   return;
 }
