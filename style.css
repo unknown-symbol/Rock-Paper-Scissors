@@ -50,6 +50,16 @@ body {
 .computer-score {
   color: #dd4242;
 }
+#result-tie {
+  text-shadow: 0px 0 30px #ffffff50;
+}
+#result-win {
+  text-shadow: 0px 0 30px #42dd4250;
+}
+#result-lose {
+  text-shadow: 0px 0 30px #dd424250;
+}
+
 .prevent-select {
   user-select: none;
   -moz-user-select: none;

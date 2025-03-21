@@ -47,16 +47,19 @@ function playRound(playerChoice) {
     console.log(
       (resultELement.textContent = `Tie! ${playerChoice} and ${computerChoice}`)
     );
+    resultELement.id = "result-tie";
   } else if (result) {
     playerScore += 1;
     console.log(
       (resultELement.textContent = `You win! ${playerChoice} beats ${computerChoice}`)
     );
+    resultELement.id = "result-win";
   } else {
     computerScore += 1;
     console.log(
       (resultELement.textContent = `You lose! ${computerChoice} beats ${playerChoice}`)
     );
+    resultELement.id = "result-lose";
   }
 
   document.querySelector(".player-score").textContent = playerScore;
