@@ -1,9 +1,12 @@
+var playerScore = 0;
+var computerScore = 0;
+
 var playerButtons = document.querySelectorAll(".player-buttons > button");
 
 playerButtons.forEach((button) => {
   button.disabled = false;
   button.addEventListener("click", () => {
-    playRound(button.id);
+    playRound(button.textContent);
   });
 });
 
@@ -11,11 +14,11 @@ function playRound(playerChoice) {
   function getComputerChoice() {
     switch (Math.floor(Math.random() * 3)) {
       case 0:
-        return "rock";
+        return "✊";
       case 1:
-        return "paper";
+        return "🖐";
       case 2:
-        return "scissors";
+        return "✌";
     }
   }
 
@@ -23,13 +26,13 @@ function playRound(playerChoice) {
     if (playerChoice == computerChoice) {
       return "Tie";
     }
-    if (playerChoice == "rock" && computerChoice == "scissors") {
+    if (playerChoice == "✊" && computerChoice == "✌") {
       return true;
     }
-    if (playerChoice == "paper" && computerChoice == "rock") {
+    if (playerChoice == "🖐" && computerChoice == "✊") {
       return true;
     }
-    if (playerChoice == "scissors" && computerChoice == "paper") {
+    if (playerChoice == "✌" && computerChoice == "🖐") {
       return true;
     }
   }
@@ -45,12 +48,17 @@ function playRound(playerChoice) {
       (resultELement.textContent = `Tie! ${playerChoice} and ${computerChoice}`)
     );
   } else if (result) {
+    playerScore += 1;
     console.log(
       (resultELement.textContent = `You win! ${playerChoice} beats ${computerChoice}`)
     );
   } else {
+    computerScore += 1;
     console.log(
       (resultELement.textContent = `You lose! ${computerChoice} beats ${playerChoice}`)
     );
   }
+
+  document.querySelector(".player-score").textContent = playerScore;
+  document.querySelector(".computer-score").textContent = computerScore;
 }

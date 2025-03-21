@@ -10,6 +10,7 @@ body {
   justify-content: center;
   gap: 50px;
   height: 100%;
+  box-sizing: content-box;
 }
 .player-buttons {
   width: 100%;
@@ -19,7 +20,8 @@ body {
 }
 .player-buttons > button {
   background: #424242;
-  border-radius: 10px;
+  width: 70px;
+  border-radius: 6px;
   box-sizing: content-box;
   border: none;
   font-size: 50px;
@@ -32,6 +34,21 @@ body {
 .player-buttons > button:hover:disabled {
   cursor: default;
   background: #424242;
+}
+.result {
+  font-size: 20px;
+}
+.score {
+  background-color: #323232;
+  padding: 20px;
+  font-size: 34px;
+  border-radius: 6px;
+}
+.player-score {
+  color: #42dd42;
+}
+.computer-score {
+  color: #dd4242;
 }
 .prevent-select {
   user-select: none;
