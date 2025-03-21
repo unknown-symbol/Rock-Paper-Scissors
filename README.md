@@ -2,7 +2,7 @@
 
 Following [The Odin Project](https://www.theodinproject.com/).
 
-Working version with only buttons and text result.
+Working ui version with buttons, text result and score.
 
 ## Some code
 
