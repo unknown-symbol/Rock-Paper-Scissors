@@ -1,0 +1,40 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #212121;
+  color: aliceblue;
+}
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  height: 100%;
+}
+.player-buttons {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+.player-buttons > button {
+  background: #424242;
+  border-radius: 10px;
+  box-sizing: content-box;
+  border: none;
+  font-size: 50px;
+  transition: 0.1s;
+}
+.player-buttons > button:hover {
+  cursor: pointer;
+  background-color: aliceblue;
+}
+.player-buttons > button:hover:disabled {
+  cursor: default;
+  background: #424242;
+}
+.prevent-select {
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}
